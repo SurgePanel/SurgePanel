@@ -1,10 +1,4 @@
-<?php
-session_start();
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header('Location: /login.php');
-    exit;
-}
-?>
+<!-- session_start();if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {header('Location: /login.php');exit;}?> -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,31 +7,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
-    <title>DASHGUM - Bootstrap Admin Template</title>
-
-    <!-- Bootstrap core CSS -->
+    <title>Surge HOsting Panel</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        
-    <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
-
   <body>
-
-      <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
-
 	  <div id="login-page">
 	  	<div class="container">
 	  	
@@ -50,12 +26,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 		            <label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.php#myModal"> Forgot Password?</a>
-		
 		                </span>
 		            </label>
 		            <button class="btn btn-theme btn-block" href="index.php" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
 		            <hr>
-		            
 		            <div class="login-social-link centered">
 		            <p>or you can sign in via your social network</p>
 		                <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
@@ -67,10 +41,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 		                    Create an account
 		                </a>
 		            </div>
-		
 		        </div>
-		
-		          <!-- Modal -->
 		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
 		              <div class="modal-dialog">
 		                  <div class="modal-content">
@@ -81,7 +52,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 		                      <div class="modal-body">
 		                          <p>Enter your e-mail address below to reset your password.</p>
 		                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-		
 		                      </div>
 		                      <div class="modal-footer">
 		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
@@ -90,24 +60,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 		                  </div>
 		              </div>
 		          </div>
-		          <!-- modal -->
-		
 		      </form>	  	
-	  	
 	  	</div>
 	  </div>
-
-    <!-- js placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-
-    <!--BACKSTRETCH-->
-    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
     <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
-    <script>
-        $.backstretch("assets/img/login-bg.jpg", {speed: 500});
-    </script>
-
-
+    <script>$.backstretch("assets/img/login-bg.jpg", {speed: 500});</script>
   </body>
 </html>

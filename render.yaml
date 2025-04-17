@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: my-php-app
+    name: Surge-Panel
     env: docker
     docker:
       dockerfilePath: ./Dockerfile

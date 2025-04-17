@@ -14,8 +14,8 @@ loading() {
 
 loading
 echo 'For Real this time: Finalising Configs'
-sleep 2
-echo "Please enter the port number for the PHP application:"
+sleep 1
+echo "Please enter the port number for the PHP application: "
 read PORT
 
 if ! [[ "$PORT" =~ ^[0-9]+$ ]] || [ "$PORT" -lt 1 ] || [ "$PORT" -gt 65535 ]; then

@@ -1,10 +1,4 @@
-<?php
-session_start();
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header('Location: /login.php');
-    exit;
-}
-?>
+<?php session_start();if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {header('Location: /login.php');exit;}?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,45 +7,22 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
-    <title>DASHGUM - Bootstrap Admin Template</title>
-
-    <!-- Bootstrap core CSS -->
+    <title>Surge Hostig Panel</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        
-    <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
-
     <script src="assets/js/chart-master/Chart.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
-
   <body>
-
   <section id="container" >
-      <!-- **********************************************************************************************************************************************************
-      TOP BAR CONTENT & NOTIFICATIONS
-      *********************************************************************************************************************************************************** -->
-      <!--header start-->
       <header class="header black-bg">
               <div class="sidebar-toggle-box">
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
-            <!--logo start-->
             <a href="index.php" class="logo"><b>DASHGUM FREE</b></a>
-            <!--logo end-->
             <div class="nav notify-row" id="top_menu">
-                <!--  notification start -->
                 <ul class="nav top-menu">
-                    <!-- settings start -->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.php#">
                             <i class="fa fa-tasks"></i>

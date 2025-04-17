@@ -24,6 +24,14 @@ countdown() {
     done
     echo "Starting"
 }
+count_down() {
+    echo "Starting in:"
+    for i in {30..1}; do
+        echo "$i..."
+        sleep 1
+    done
+    echo "Starting"
+}
 
 echo "------------------------------------------Surge Panel Installation Wrapper----------------------------------------------------"
 echo ""
@@ -46,8 +54,8 @@ echo "    \:::\  /:::/    /        \:::\__/:::/    /           !::! \::/____/   
 echo "     \:::\/:::/    /          \::::::::/    /            !::!  ~!               \:::\/:::/    /          \:::\   \/____/      "
 echo "      \::::::/    /            \::::::/    /             !::!   !                \::::::/    /            \:::\    \          "
 echo "       \::::/    /              \::::/    /              !::!   !                 \::::/    /              \:::\____\         "
-echo "        \::/    /                \::/____/                !:!   !                  \::/____/                \::/    /         "
-echo "         \/____/                  ~~                       !!___!                                            \/____/          "
+echo "        \::/    /                \::/    /                !:!   !                  \::/    /                \::/    /         "
+echo "         \/____/                  \/____/                  !!___!                   \/____/                  \/____/          "
 loading
 
 # Am I root? With Prompt
@@ -120,7 +128,7 @@ else
     exit 0
 fi
 
-echo "How did you install the software? (Enter 'curl', 'wget', or 'github')"
+echo "How did you install the software? (Enter 'wget' or 'github')"
 read method
 
 if [[ "$method" == "curl" || "$method" == "wget" ]]; then
@@ -136,9 +144,9 @@ elif [[ "$method" == "github" ]]; then
     bash ./deploy.sh
 
 else
-    echo "Invalid input. Please enter 'curl', 'wget', or 'github'."
-    echo "Now install it again cause you cant follow instructions, smh im disapointed"
-    sleep 2
+    echo "Invalid input. Please enter 'wget' or 'github'."
+    echo "Now wait 30 seconds cause you cant follow instructions, smh im disapointed"
+    count_down
 fi
 # if you see this thats a problem!
 

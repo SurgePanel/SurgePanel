@@ -1,10 +1,4 @@
-<?php
-session_start();
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header('Location: /login.php');
-    exit;
-}
-?>
+<?php session_start();if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {header('Location: /login.php');exit;}?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,44 +7,22 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
-    <title>DASHGUM - Bootstrap Admin Template</title>
-
-    <!-- Bootstrap core CSS -->
+    <title>Surge Hosting Panel</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
 	<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">    
-        
-    <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
-
   <body>
-
   <section id="container" >
-      <!-- **********************************************************************************************************************************************************
-      TOP BAR CONTENT & NOTIFICATIONS
-      *********************************************************************************************************************************************************** -->
-      <!--header start-->
       <header class="header black-bg">
               <div class="sidebar-toggle-box">
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
-            <!--logo start-->
             <a href="index.php" class="logo"><b>DASHGUM FREE</b></a>
-            <!--logo end-->
             <div class="nav notify-row" id="top_menu">
-                <!--  notification start -->
                 <ul class="nav top-menu">
-                    <!-- settings start -->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.php#">
                             <i class="fa fa-tasks"></i>
@@ -118,8 +90,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                             </li>
                         </ul>
                     </li>
-                    <!-- settings end -->
-                    <!-- inbox dropdown start-->
                     <li id="header_inbox_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.php#">
                             <i class="fa fa-envelope-o"></i>
@@ -183,9 +153,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                             </li>
                         </ul>
                     </li>
-                    <!-- inbox dropdown end -->
+
                 </ul>
-                <!--  notification end -->
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
@@ -193,27 +162,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             	</ul>
             </div>
         </header>
-      <!--header end-->
-      
-      <!-- **********************************************************************************************************************************************************
-      MAIN SIDEBAR MENU
-      *********************************************************************************************************************************************************** -->
-      <!--sidebar start-->
       <aside>
           <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
-              
               	  <p class="centered"><a href="profile.php"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">Marcel Newman</h5>
-              	  	
                   <li class="mt">
                       <a href="index.php">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
-                  </li>
-
+                 </li>
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
@@ -225,7 +184,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                           <li><a  href="panels.php">Panels</a></li>
                       </ul>
                   </li>
-
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-cogs"></i>
@@ -279,19 +237,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                   </li>
 
               </ul>
-              <!-- sidebar menu end-->
           </div>
       </aside>
-      <!--sidebar end-->
-      
-      <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
-      <!--main content start-->
       <section id="main-content">
           <section class="wrapper site-min-height">
           <h3><i class="fa fa-angle-right"></i> Morris Charts</h3>
-              <!-- page start-->
               <div id="morris">
                   <div class="row mt">
                       <div class="col-lg-6">
@@ -330,12 +280,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                       </div>
                   </div>
               </div>
-              <!-- page end-->
           </section>
-      </section><!-- /MAIN CONTENT -->
-
-      <!--main content end-->
-      <!--footer start-->
+      </section>
       <footer class="site-footer">
           <div class="text-center">
               2014 - Alvarez.is
@@ -344,33 +290,16 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
               </a>
           </div>
       </footer>
-      <!--footer end-->
   </section>
-
-    <!-- js placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="assets/js/jquery.scrollTo.min.js"></script>
     <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-
-
-    <!--common script for all pages-->
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 	<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
     <script src="assets/js/common-scripts.js"></script>
-
-    <!--script for this page-->
     <script src="assets/js/morris-conf.js"></script>
-    
-  <script>
-      //custom select box
-
-      $(function(){
-          $('select.styled').customSelect();
-      });
-
-  </script>
-
+  <script>$(function(){$('select.styled').customSelect();});</script>
   </body>
 </html>

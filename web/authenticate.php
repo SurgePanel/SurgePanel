@@ -7,7 +7,6 @@ if (!$db) {
     die("Connection failed: " . $db->lastErrorMsg());
 }
 
-// Create the users table if it doesn't exist
 $db->exec("CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL UNIQUE,
@@ -31,10 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: /panel/index.php');
             exit;
         } else {
-            echo "Invalid username or password.";
-        }
+            echo "Invalid username or password.";}
     } else {
-        echo "Invalid username or password.";
-    }
-}
-?>
+        echo "Invalid username or password.";}}?>
