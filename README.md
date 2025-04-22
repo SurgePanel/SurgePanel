@@ -5,4 +5,4 @@ A Amazing panel for anyone that needs something lightweight for hosting small or
 ```bash
 wget surgepanel.onrender.com/install.sh && bash install.sh
 ```
-#### note curl doesnt work
+#### note curl doesnt work (no clue why)
