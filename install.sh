@@ -16,6 +16,7 @@ loading() {
     done
     echo "] Done!"
 }
+
 countdown() {
     echo "Starting in:"
     for i in {3..1}; do
@@ -56,6 +57,7 @@ echo "      \::::::/    /            \::::::/    /             !::!   !         
 echo "       \::::/    /              \::::/    /              !::!   !                 \::::/    /              \:::\____\         "
 echo "        \::/    /                \::/    /                !:!   !                  \::/    /                \::/    /         "
 echo "         \/____/                  \/____/                  !!___!                   \/____/                  \/____/          "
+echo "------------------------------------------------------------------------------------------------------------By Kyle Speight---"
 loading
 
 # Am I root? With Prompt
@@ -107,6 +109,7 @@ if [ "$OS_SUPPORTED" == "true" ]; then
     echo "Starting MySQL service..." | tee -a $LOG_FILE
     sudo systemctl start mysql
     loading
+
 # Secure MySQL
     echo "Securing MySQL installation..." | tee -a $LOG_FILE
     sudo mysql_secure_installation <<EOF
@@ -135,19 +138,16 @@ if [[ "$method" == "curl" || "$method" == "wget" ]]; then
     echo "Pulling the latest changes from the GitHub repository..."
     git clone https://github.com/SurgePanel/SurgePanel.git
     sleep 4
-    cd SurgePanel/
-    bash ./deploy.sh
+
 
 elif [[ "$method" == "github" ]]; then
-    echo "Executing the script for GitHub clone installation..."
-    chmod +x ./deploy.sh
-    bash ./deploy.sh
-
+    echo "Moving some stuff around..."
+    sudo useradd surgepanel
+    mv ./SurgePanel/ /home/surgepanel/
+    cd /home/surgepanel/
 else
     echo "Invalid input. Please enter 'wget' or 'github'."
-    echo "Now wait 30 seconds cause you cant follow instructions, smh im disapointed"
     count_down
 fi
-# if you see this thats a problem!
 
 exit 1

@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: Surge-Panel
-    env: docker
-    docker:
-      dockerfilePath: ./Dockerfile
-    plan: free
-    autoDeploy: true
